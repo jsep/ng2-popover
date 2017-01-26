@@ -4,3 +4,11 @@ node_modules/
 **/*.ngfactory.ts
 .vscode
 npm-debug.log
+.idea/
+# OS generated files
+Thumbs.db
+.DS_Store
+# Ignored files
+*.js
+*.map
+*.d.ts
