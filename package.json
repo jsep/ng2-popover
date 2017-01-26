@@ -1,6 +1,6 @@
 {
   "name": "@jsep/popover",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Simple popover control for your angular2 applications using bootstrap3.",
   "license": "MIT",
   "readmeFilename": "README.md",
