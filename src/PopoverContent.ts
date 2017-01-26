@@ -12,8 +12,8 @@ import {Popover} from "./Popover";
      style="display: block"
      role="popover">
     <div [hidden]="!closeOnMouseOutside" class="virtual-area"></div>
-    <div class="arrow"></div> 
-    <h3 class="popover-title" [hidden]="!title">{{ title }}</h3>
+    <div class="arrow" [style.border-bottom-color]="titleEl?.style.backgroundColor"></div>
+    <div class="popover-title" [hidden]="!title" [ngStyle]="titleStyle" #titleEl>{{ title }}</div>
     <div class="popover-content">
         <ng-content></ng-content>
         {{ content }}
@@ -21,6 +21,10 @@ import {Popover} from "./Popover";
 </div>
 `,
     styles: [`
+.popover .arrow:after {
+    border-bottom-color: inherit!important;
+}
+
 .popover .virtual-area {
     height: 11px;
     width: 100%;
@@ -66,6 +70,9 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
 
     @Input()
     closeOnMouseOutside: boolean = false;
+
+    @Input()
+    titleStyle: Object = {};
 
     // -------------------------------------------------------------------------
     // Properties
