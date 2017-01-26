@@ -1,5 +1,5 @@
 {
-  "name": "ng2-popover",
+  "name": "@jsep/popover",
   "version": "0.0.13",
   "description": "Simple popover control for your angular2 applications using bootstrap3.",
   "license": "MIT",
@@ -63,6 +63,10 @@
     "zone.js": "^0.7.2"
   },
   "scripts": {
-    "tsc": "ngc -p tsconfig-aot.json"
-  }
+    "tsc": "ngc -p tsconfig-aot.json",
+    "prepublish": "tsc",
+    "tsc-watch": "tsc -w"
+  },
+  "typings": "./build/es5/src/index.d.ts",
+  "main": "./build/es5/src/index.js"
 }
